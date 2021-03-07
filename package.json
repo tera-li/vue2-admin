@@ -1,20 +1,21 @@
 {
-  "name": "vue-admin-template",
+  "name": "found-miyi-admin",
   "version": "4.4.0",
   "description": "A vue admin template with Element UI & axios & iconfont & permission control & lint",
-  "author": "Pan <panfree23@gmail.com>",
+  "author": "ljl <776745393@gmail.com>",
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build:prod": "vue-cli-service build",
+    "build:prod": "vue-cli-service build --mode production",
     "build:stage": "vue-cli-service build --mode staging",
     "preview": "node build/index.js --preview",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
     "lint": "eslint --ext .js,.vue src",
     "test:unit": "jest --clearCache && vue-cli-service test:unit",
-    "test:ci": "npm run lint && npm run test:unit"
+    "test:ci": "npm run lint && npm run test:unit",
+    "commit": "cz"
   },
   "dependencies": {
-    "axios": "0.18.1",
+    "axios": "^0.21.1",
     "core-js": "3.6.5",
     "element-ui": "2.13.2",
     "js-cookie": "2.2.0",
@@ -36,7 +37,9 @@
     "babel-jest": "23.6.0",
     "babel-plugin-dynamic-import-node": "2.3.3",
     "chalk": "2.4.2",
+    "commitizen": "^4.2.3",
     "connect": "3.6.6",
+    "cz-customizable": "^6.3.0",
     "eslint": "6.7.2",
     "eslint-plugin-vue": "6.2.2",
     "html-webpack-plugin": "3.2.0",
@@ -52,11 +55,21 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 3 versions",
+    "not ie <= 8",
+    "chrome >= 14",
+    "safari >= 3",
+    "ios >= 8",
+    "android >= 4.0"
   ],
   "engines": {
     "node": ">=8.9",
     "npm": ">= 3.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  }
 }
