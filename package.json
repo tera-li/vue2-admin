@@ -1,5 +1,5 @@
 {
-  "name": "found-miyi-admin",
+  "name": "found-admin",
   "version": "4.4.0",
   "description": "A vue admin template with Element UI & axios & iconfont & permission control & lint",
   "author": "ljl <776745393@gmail.com>",
