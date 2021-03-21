@@ -12,7 +12,7 @@ const name = defaultSettings.title || 'vue Admin Template' // page title
 // use administrator privileges to execute the command line.
 // For example, Mac: sudo npm run
 // You can change the port by the following methods:
-// port = 9528 npm run dev OR npm run dev --port = 9528
+// port = 9522 npm run dev OR npm run dev --port = 9522
 const port = process.env.port || process.env.npm_config_port || 9222 // dev port
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/123
