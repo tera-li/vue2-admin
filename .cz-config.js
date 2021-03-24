@@ -2,7 +2,7 @@
 
 module.exports = {
   types: [
-    { value: 'feat', name: 'feat:     新功能' },
+    { value: ':bug:feat', name: 'feat:     新功能' },
     { value: 'fix', name: 'fix:      修复' },
     { value: 'bug', name: 'bug:      bug' },
     { value: 'docs', name: 'docs:     文档变更' },
