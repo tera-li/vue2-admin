@@ -1,6 +1,11 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  ignores: [(commit) => commit.includes(':bug:')],
+  ignores: [
+    (commit) => {
+      console.log(commit)
+      return commit.includes(':bug:')
+    }
+  ],
   rules: {
     'type-enum': [
       2,
