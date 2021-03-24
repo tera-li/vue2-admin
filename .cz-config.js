@@ -17,7 +17,6 @@ module.exports = {
     { value: 'revert', name: 'revert:   回退' },
     { value: 'build', name: 'build:    打包' }
   ],
-  // override the messages, defaults are as follows
   messages: {
     type: '请选择提交类型:',
     // scope: '请输入文件修改范围(可选):',
