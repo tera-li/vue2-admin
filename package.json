@@ -12,7 +12,6 @@
     "lint": "eslint --ext .js,.vue src",
     "test:unit": "jest --clearCache && vue-cli-service test:unit",
     "test:ci": "npm run lint && npm run test:unit",
-    "commit": "cz",
     "lint-staged": "lint-staged",
     "commitlint": "commitlint -E HUSKY_GIT_PARAMS"
   },
