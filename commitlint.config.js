@@ -2,8 +2,7 @@ module.exports = {
   extends: ['@commitlint/config-conventional'],
   ignores: [
     (commit) => {
-      console.log(commit)
-      return commit.includes(':bug:')
+      return commit.slice(0, 1).includes(':')
     }
   ],
   rules: {
