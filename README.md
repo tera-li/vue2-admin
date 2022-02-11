@@ -1,6 +1,6 @@
 ```bash
 # 克隆项目
-https://github.com/hljinjiang/vue2-admin.git
+git clone https://github.com/hljinjiang/vue2-admin.git
 
 # 进入项目目录
 cd found-miyi-admin
