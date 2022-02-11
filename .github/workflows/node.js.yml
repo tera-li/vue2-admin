@@ -1,6 +1,3 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Node.js CI
 
 on:
@@ -16,26 +13,28 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x,14.x]
+        node-version: [ 14.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    # 安装npm包
-    - run: npm ci
-    # 打包npm包
-    - run: npm run build:prod --if-present
-    # 部署文件
-    - name: Deploy
-    # 4.1.1不需要token
-      uses: JamesIves/github-pages-deploy-action@4.1.1
-      with:
-        # 发布到的分支
-        BRANCH: gh-pages
-        # 要发布的文件夹
-        FOLDER: dist
+      - uses: actions/checkout@v2
+      # 设置Node.js 版本
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      # 安装npm包
+      - run: npm ci
+      # 打包npm包
+      - run: npm run build:prod --if-present
+      # 部署文件
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          # 该workflow需要操作repo，因此需要一个密钥，下面会讲到如何获取这个密钥
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 发布到的分支
+          BRANCH: gh-pages
+          # 要发布的文件夹
+          FOLDER: dist
