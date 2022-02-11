@@ -32,7 +32,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          # 该workflow需要操作repo，因此需要一个密钥，下面会讲到如何获取这个密钥
+          # 该workflow需要操作repo
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           # 发布到的分支
           BRANCH: gh-pages
