@@ -1,6 +1,6 @@
 ```bash
 # 克隆项目
-https://git.sabertrain.com/linjinlei/found-miyi-admin.git
+https://github.com/hljinjiang/vue2-admin.git
 
 # 进入项目目录
 cd found-miyi-admin
